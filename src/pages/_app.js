@@ -1,12 +1,13 @@
-import Header from "@/components/Header";
-import "@/styles/globals.css";
-// import "../styles/Header.scss"
+import '../styles/globals.css';
+import Header from '@/components/Header/header';
 
-export default function App({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return (
     <>
-    <Header />
+      <Header />
       <Component {...pageProps} />
     </>
   );
 }
+
+export default MyApp;

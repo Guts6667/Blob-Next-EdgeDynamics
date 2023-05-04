@@ -1,0 +1,50 @@
+.container__ourCompany {
+    min-height: 100vh;
+    padding: 50px 10% 50px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 45px;
+    background-image: url("../../../public/assets/BG-OurCompagny.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &_title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &_content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+      .box_company {
+        background: rgba(14, 14, 14, 0.5);
+        border: 0.5px solid #262626;
+        backdrop-filter: blur(7.5px);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        img {
+          height: 60px;
+          width: auto;
+        }
+        @media only screen and (min-width: 768px) {
+          flex-direction: row;
+          justify-content: space-between;
+          img {
+            height: 75px;
+          }
+          &:last-of-type {
+            p {
+              width: 60%;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+  

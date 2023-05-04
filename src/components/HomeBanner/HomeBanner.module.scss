@@ -1,0 +1,33 @@
+.container__home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    video {
+      width: auto;
+      height: 100vh;
+      filter: brightness(0.4);
+    }
+  
+    &_title {
+      z-index: 2;
+      position: absolute;
+      padding: 5%;
+      text-align: center;
+      @media only screen and (min-width: 768px) {
+        width: 70%;
+        padding: 10%;
+      }
+  
+      .author {
+        font-weight: 700;
+        font-weight: 14px;
+        @media only screen and (min-width: 768px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  

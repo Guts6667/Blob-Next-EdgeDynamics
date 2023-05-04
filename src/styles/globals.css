@@ -1,48 +1,52 @@
 @font-face {
   font-family: "Metropolis";
-  src: url("/fonts/metropolis/Metropolis-Regular.otf") format("truetype");
+  src: url("../../public/fonts/metropolis/Metropolis-Regular.otf")
+    format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Metropolis";
-  src: url("/fonts/metropolis/Metropolis-Bold.otf") format("truetype");
+  src: url("../../public/fonts/metropolis/Metropolis-Bold.otf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Metropolis";
-  src: url("/fonts/metropolis/Metropolis-ExtraBold.otf") format("truetype");
+  src: url("../../public/fonts/metropolis/Metropolis-ExtraBold.otf")
+    format("truetype");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Metropolis";
-  src: url("/fonts/metropolis/Metropolis-SemiBold.otf") format("truetype");
+  src: url("../../public/fonts/metropolis/Metropolis-SemiBold.otf")
+    format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Metropolis";
-  src: url("/fonts/metropolis/Metropolis-Black.otf") format("truetype");
+  src: url("../../public/fonts/metropolis/Metropolis-Black.otf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Metropolis";
-  src: url("/fonts/metropolis/Metropolis-RegularItalic.otf") format("truetype");
+  src: url("../../public/fonts/metropolis/Metropolis-RegularItalic.otf")
+    format("truetype");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Azonix";
-  src: url("/fonts/azonix/Azonix.otf") format("truetype");
+  src: url("../../public/fonts/azonix/Azonix.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -66,45 +70,48 @@ code {
 h1 {
   font-weight: 800;
   font-size: 20px;
+
 }
-h1 > strong {
+h1>strong {
   color: #f0fd71;
   font-size: 20px;
   font-weight: 800;
+  
+}
+@media only screen and (min-width: 768px) {
+  h1{
+    font-size: 30px;
+  }
+  h1>strong{
+    font-size: 30px;
+  }
+
 }
 
 h2 {
   font-family: "Azonix", Arial, Helvetica, sans-serif;
   font-size: 24px;
   text-align: center;
+  @media only screen and (min-width: 768px) {
+    font-size: 30px;
+  }
 }
 nav {
   font-size: 14px;
+  @media only screen and (min-width: 768px) {
+    font-size: 12px;
+  }
 }
 
 a {
   text-decoration: none;
 }
-.section-title {
+
+.section_title {
   color: #f0fd71;
   font-size: 16px;
   text-align: center;
 }
 p {
   line-height: 25px;
-}
-
-@media only screen and (min-width: 768px) {
-  h1 {
-    font-size: 30px;
-  }
-  h1 > strong {
-    font-size: 30px;
-  }
-  h2 {
-    font-size: 30px;
-  }
-  nav {
-    font-size: 12px;
-  }
 }

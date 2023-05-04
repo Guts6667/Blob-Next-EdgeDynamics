@@ -1,0 +1,28 @@
+.container__specs {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    &_heads {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      justify-content: end;
+      .head {
+        font-weight: 600;
+        background: rgba(14, 14, 14, 0.5);
+        border: 0.5px solid #262626;
+        backdrop-filter: blur(3.5px);
+        border-radius: 10px;
+        text-align: center;
+        padding: 15px 10px;
+        width: 140px;
+      }
+    }
+    &_carousel {
+      display: flex;
+      column-gap: 30px;
+    }
+  }
+  
+  
+  

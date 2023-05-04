@@ -1,0 +1,22 @@
+.container__ourVision {
+  min-height: 100vh;
+  padding: 50px 10% 50px 10%;
+  background-image: url("../../../public/assets/BG-OurVision.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  @media only screen and (min-width: 768px) {
+    align-items: flex-start;
+    text-align: left;
+    p {
+      width: 70%;
+    }
+  }
+}
