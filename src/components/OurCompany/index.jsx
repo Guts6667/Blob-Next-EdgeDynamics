@@ -2,7 +2,7 @@ import style from "./OurCompany.module.scss"
 
 export default function OurCompany() {
   return (
-    <section className={style.container__ourCompany}>
+    <section className={style.container__ourCompany} id="about">
       <div className={style.container__ourCompany_title}>
         <span className="section_title">About us</span>
         <h2>OUR COMPANY</h2>

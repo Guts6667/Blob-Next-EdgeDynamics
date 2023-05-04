@@ -8,8 +8,6 @@ const Header = () => {
 const burgerRef = useRef(null)
   const handleBtn = () => {
     setIsOpen(!isOpen);
-    console.log(burgerRef.current);
-    console.log(isOpen);
     if (burgerRef.current) {
         burgerRef.current.classList.toggle("open");
       }

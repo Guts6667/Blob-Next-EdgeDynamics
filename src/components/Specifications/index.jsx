@@ -1,9 +1,14 @@
 import CarouselItem from "../CarouselItem";
 import style from "./Specifications.module.scss";
-import { useState } from "react";
+import { useState, useRef } from "react";
 export default function Specifications() {
   const [index, setIndex] = useState(0);
 
+  const itemRef = useRef(null);
+  const test = () => {
+    console.log("current: ", itemRef.current)
+    console.log("ref: ", itemRef)
+  }
   const sensors = [
     {
       id: "6H6GFd",
@@ -93,6 +98,8 @@ export default function Specifications() {
           maintenance={sensors[currentIndex].maintenance}
           service={sensors[currentIndex].service}
           color={sensors[currentIndex].color}
+          ref={itemRef}
+          onClick={test}
         />
         <div className={style.container__specs_dot}></div>
         {/* {sensors.map((sensor) => {

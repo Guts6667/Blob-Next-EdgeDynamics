@@ -1,5 +1,21 @@
+.container__ourProducts {
+  padding-top: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
+  justify-content: center;
+  min-height: 100vh;
+  &_title {
+    span {
+      color: #f0fd71;
+    }
+    h2 {
+      text-align: left;
+    }
+  }
+}
+
+
 .container__product {
-  padding: 50px 10% 50px 10%;
   &_description {
     strong {
       color: #f0fd71;
