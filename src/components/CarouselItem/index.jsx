@@ -9,18 +9,20 @@ const CarouselItem = ({
   service,
   color,
 }) => {
+
   const itemStyle = {
     border: `solid 1px ${color}`,
   };
   const itemTitleStyle = {
-    backgroundColor: color,
+    backgroundColor: `${color}`,
   };
 
   return (
-    <div className={style.item} style={itemStyle}>
-      <div className={style.item_title} style={itemTitleStyle}>
+    <div className={style.item} style={itemStyle}  >
+        <div className={style.item_title} style={itemTitleStyle}>
         <span>{type}</span>
       </div>
+     
       <div className={style.item_cell}>
         <span>
           Temperature*

@@ -44,7 +44,7 @@ const burgerRef = useRef(null)
 
         <nav>
           <a href="#about">About</a>
-          <a href="#product">Products & Services</a>
+          <a href="#products">Products & Services</a>
           <a href="#roadmap">Roadmap</a>
           <a href="#contact">
             <button className={style.contact_btn}>Join Us</button>

@@ -2,13 +2,6 @@ import CarouselItem from "../CarouselItem";
 import style from "./Specifications.module.scss";
 import { useState, useRef } from "react";
 export default function Specifications() {
-  const [index, setIndex] = useState(0);
-
-  const itemRef = useRef(null);
-  const test = () => {
-    console.log("current: ", itemRef.current)
-    console.log("ref: ", itemRef)
-  }
   const sensors = [
     {
       id: "6H6GFd",
@@ -45,14 +38,49 @@ export default function Specifications() {
       color: "#9DAB11",
     },
   ];
-  let currentIndex = 0;
-  const handleSwipe = () => {
-    if (index < sensors.length) {
-      setIndex(currentIndex + 1);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const goToPrevSlide = () => {
+    if (currentIndex === 0) {
+      setCurrentIndex(sensors.length - 1);
     } else {
-      setIndex(0);
+      setCurrentIndex(currentIndex - 1);
     }
   };
+  const goToNextSlide = () => {
+    if (currentIndex === sensors.length - 1) {
+      setCurrentIndex(0);
+    } else {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchMove, setTouchMove] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+
+
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+  const handleTouchMove = (e) => {
+    setTouchMove(e.targetTouches[0].clientX);
+  };
+  const handleTouchEnd = () => {
+    setTouchEnd(touchStart - touchMove);
+    if (touchStart - touchMove > 50) {
+      goToNextSlide();
+    }
+    if (touchStart - touchMove < -50) {
+      goToPrevSlide();
+    }
+  };
+
+  // Create a function that will update the index depending on the dot index clicked.
+    const handleDotClick = (dotIndex) => {
+        setCurrentIndex(dotIndex);
+    };
+
+ 
+
 
   return (
     <section className={style.container__specs}>
@@ -78,35 +106,70 @@ export default function Specifications() {
         <div className={style.head}>
           <span>Lifetime upgrade Service</span>
         </div>
-        {/* <div>
-                      <span>* = ATEX zone 0</span>
-                  </div> */}
       </div>
       <div
-        className={style.container__specs_carousel}
-        onTouchStart={(e) => {
-          handleSwipe(e);
-        }}
+        className={`${style.container__carousel} ${style.container__carousel_xl}`}
       >
-        <CarouselItem
-          key={`${sensors[currentIndex].type}-${sensors[currentIndex].id}`}
-          type={sensors[currentIndex].type}
-          premium={sensors[currentIndex].premium}
-          network={sensors[currentIndex].network}
-          cloud={sensors[currentIndex].cloud}
-          analytic={sensors[currentIndex].analytic}
-          maintenance={sensors[currentIndex].maintenance}
-          service={sensors[currentIndex].service}
-          color={sensors[currentIndex].color}
-          ref={itemRef}
-          onClick={test}
-        />
-        <div className={style.container__specs_dot}></div>
-        {/* {sensors.map((sensor) => {
-                      return(
-                          <CarouselItem key={`${sensor.type}-${sensor.id}`} type={sensor.type} premium={sensor.premium} network={sensor.network} cloud={sensor.cloud} analytic={sensor.analytic} maintenance={sensor.maintenance} service={sensor.service}/>
-                      )  
-                  })} */}
+        <div className={style.container__carousel_wrapper}>
+          {sensors.map((sensor) => {
+            return (
+              <CarouselItem
+                key={`${sensor.type}-${sensor.id}`}
+                type={sensor.type}
+                premium={sensor.premium}
+                network={sensor.network}
+                cloud={sensor.cloud}
+                analytic={sensor.analytic}
+                maintenance={sensor.maintenance}
+                service={sensor.service}
+                color={sensor.color}
+               
+
+              />
+            );
+          })}
+        </div>
+      </div>
+      <div
+        className={`${style.container__carousel} ${style.container__carousel_sm}`}
+      >
+        <div
+          className={style.container__carousel_wrapper}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          <CarouselItem
+            key={`${sensors[currentIndex].type}-${sensors[currentIndex].id}`}
+            type={sensors[currentIndex].type}
+            premium={sensors[currentIndex].premium}
+            network={sensors[currentIndex].network}
+            cloud={sensors[currentIndex].cloud}
+            analytic={sensors[currentIndex].analytic}
+            maintenance={sensors[currentIndex].maintenance}
+            service={sensors[currentIndex].service}
+            color={sensors[currentIndex].color}
+            
+          />
+          <div className={style.dots}>
+            {[...Array(sensors.length)].map((_, index) => (
+              <span
+                key={index}
+                className={`${style.dot_item} ${
+                  currentIndex === index ? style.active : ""
+                }`}
+                //if the item with the index is the current index, then change the background color to the same color as the sensor.color
+                style={{
+                  backgroundColor:
+                    currentIndex === index
+                      ? sensors[currentIndex].color
+                      : "#2525",
+                }}
+                onClick={() => handleDotClick(index)}
+              ></span>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

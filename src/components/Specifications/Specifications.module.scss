@@ -1,28 +1,101 @@
 .container__specs {
-    margin-top: 50px;
+  padding: 50px 5% 50px 5%;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 25px;
+
+  &_heads {
     display: flex;
-    justify-content: space-between;
-    &_heads {
-      display: flex;
-      flex-direction: column;
-      row-gap: 20px;
-      justify-content: end;
-      .head {
-        font-weight: 600;
-        background: rgba(14, 14, 14, 0.5);
-        border: 0.5px solid #262626;
-        backdrop-filter: blur(3.5px);
-        border-radius: 10px;
-        text-align: center;
-        padding: 15px 10px;
-        width: 140px;
-      }
-    }
-    &_carousel {
-      display: flex;
-      column-gap: 30px;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: end;
+    .head {
+      font-weight: 600;
+      background: rgba(14, 14, 14, 0.5);
+      border: 0.5px solid #262626;
+      backdrop-filter: blur(3.5px);
+      border-radius: 10px;
+      text-align: center;
+      padding: 15px 10px;
+      width: 140px;
     }
   }
-  
-  
-  
+  &_carousel {
+    display: flex;
+    justify-content: space-between;
+    &_xl {
+      @media only screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+    &_sm {
+      width: 40vw;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      align-items: center;
+      position: relative;
+      @media only screen and (min-width: 1024px) {
+        display: none;
+      }
+      .dots {
+        display: flex;
+        column-gap: 5px;
+        position: absolute;
+        bottom: -20px;
+        &_item {
+          background-color: #ffffff4a;
+          width: 10px;
+          height: 10px;
+          border-radius: 100%;
+          .active {
+            background-color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.container {
+  &__carousel {
+    &_xl {
+      @media only screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+    &_sm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      cursor: pointer;
+      @media only screen and (min-width: 1024px) {
+        display: none;
+      }
+    }
+    &_wrapper {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+    }
+  }
+}
+.dots {
+  width: 100%;
+  display: flex;
+  column-gap: 5px;
+  position: absolute;
+  bottom: -20px;
+  justify-content: center;
+
+  span {
+    width: 10px;
+    height: 10px;
+    background-color: #252525;
+    border-radius: 100%;
+  }
+  @media only screen and (min-width: 1024px) {
+    display: none;
+  }
+}
