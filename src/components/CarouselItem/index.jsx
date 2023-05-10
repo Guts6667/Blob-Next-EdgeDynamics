@@ -1,5 +1,7 @@
 import style from "./CarouserlItem.module.scss";
 import Image from "next/image";
+import invalidIcon from "/public/assets/invalid.svg";
+import validIcon from "/public/assets/valid.svg";
 const CarouselItem = ({
   type,
   premium,
@@ -38,7 +40,7 @@ const CarouselItem = ({
       <div className={style.item_cell}>
         {premium && (
           <Image
-            src="/assets/valid.svg"
+            src={validIcon}
             width={30}
             height={30}
             alt="Icon valid"
@@ -49,20 +51,20 @@ const CarouselItem = ({
         {network && <span>{network}</span>}
         {!network && (
           <Image
-            src="/assets/invalid.svg"
+            src={invalidIcon}
             width={30}
             height={30}
-            alt="Icon valid"
+            alt="Icon Invalid"
           />
         )}
       </div>
       <div className={style.item_cell}>
         {!cloud && (
           <Image
-            src="/assets/invalid.svg"
+            src={invalidIcon}
             width={30}
             height={30}
-            alt="Icon valid"
+            alt="Icon invalid"
           />
         )}
         {cloud && <span>{cloud}</span>}
@@ -71,10 +73,10 @@ const CarouselItem = ({
         {analytic && <span>{analytic}</span>}
         {!analytic && (
           <Image
-            src="/assets/invalid.svg"
+            src={invalidIcon}
             width={30}
             height={30}
-            alt="Icon valid"
+            alt="Icon invalid"
           />
         )}
       </div>
@@ -84,10 +86,10 @@ const CarouselItem = ({
       <div className={style.item_cell}>
         {!service && (
           <Image
-            src="/assets/invalid.svg"
+            src={invalidIcon}
             width={30}
             height={30}
-            alt="Icon valid"
+            alt="Icon invalid"
           />
         )}
         {service && <span>{service}</span>}

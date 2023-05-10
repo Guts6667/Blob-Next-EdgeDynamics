@@ -3,6 +3,7 @@ import { useState, useRef } from "react";
 import Image from "next/image";
 // import MenuMobile from "../MenuMobile";
 import style from "./Header.module.scss";
+import logo from "/public/assets/edgeDynamics.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,12 +28,7 @@ const Header = () => {
           <span></span>
         </div>
         <a href="#home">
-          <Image
-            src="/assets/EdgeDynamics.png"
-            alt="Logo Edge Dynamics"
-            width={88.6}
-            height={36}
-          />
+          <Image src={logo} alt="Logo Edge Dynamics" width={88.6} height={36} />
         </a>
         <a href="#contact" className={style.contact_btn}>
           Join Us
@@ -41,7 +37,7 @@ const Header = () => {
       <div className={style.container__header_desktop}>
         <a href="#home">
           <Image
-            src="/assets/EdgeDynamics.png"
+            src={logo}
             className={style.logo}
             width={88.6}
             height={36}
