@@ -27,18 +27,12 @@ const Header = () => {
           <span></span>
         </div>
         <a href="#home">
-          {/* <img
-            src="/assets/EdgeDynamics.png"
-            className={style.logo}
-            alt="Logo Edge Dynamics"
-          /> */}
           <Image
             src="/assets/EdgeDynamics.png"
             alt="Logo Edge Dynamics"
             width={88.6}
             height={36}
-          ></Image>
-
+          />
         </a>
         <a href="#contact" className={style.contact_btn}>
           Join Us
@@ -46,9 +40,11 @@ const Header = () => {
       </div>
       <div className={style.container__header_desktop}>
         <a href="#home">
-          <img
+          <Image
             src="/assets/EdgeDynamics.png"
             className={style.logo}
+            width={88.6}
+            height={36}
             alt="Logo Edge Dynamics"
           />
         </a>

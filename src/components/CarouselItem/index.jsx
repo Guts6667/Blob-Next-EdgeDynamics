@@ -1,4 +1,5 @@
 import style from "./CarouserlItem.module.scss";
+import Image from "next/image";
 const CarouselItem = ({
   type,
   premium,
@@ -9,7 +10,6 @@ const CarouselItem = ({
   service,
   color,
 }) => {
-
   const itemStyle = {
     border: `solid 1px ${color}`,
   };
@@ -18,11 +18,11 @@ const CarouselItem = ({
   };
 
   return (
-    <div className={style.item} style={itemStyle}  >
-        <div className={style.item_title} style={itemTitleStyle}>
+    <div className={style.item} style={itemStyle}>
+      <div className={style.item_title} style={itemTitleStyle}>
         <span>{type}</span>
       </div>
-     
+
       <div className={style.item_cell}>
         <span>
           Temperature*
@@ -36,25 +36,60 @@ const CarouselItem = ({
         </span>
       </div>
       <div className={style.item_cell}>
-        {premium && <img src="/assets/valid.svg" alt="Icon valid" />}
+        {premium && (
+          <Image
+            src="/assets/valid.svg"
+            width={30}
+            height={30}
+            alt="Icon valid"
+          />
+        )}
       </div>
       <div className={style.item_cell}>
         {network && <span>{network}</span>}
-        {!network && <img src="/assets/invalid.svg" alt="Icon valid" />}
+        {!network && (
+          <Image
+            src="/assets/invalid.svg"
+            width={30}
+            height={30}
+            alt="Icon valid"
+          />
+        )}
       </div>
       <div className={style.item_cell}>
-        {!cloud && <img src="/assets/invalid.svg" alt="Icon valid" />}
+        {!cloud && (
+          <Image
+            src="/assets/invalid.svg"
+            width={30}
+            height={30}
+            alt="Icon valid"
+          />
+        )}
         {cloud && <span>{cloud}</span>}
       </div>
       <div className={style.item_cell}>
         {analytic && <span>{analytic}</span>}
-        {!analytic && <img src="/assets/invalid.svg" alt="Icon valid" />}
+        {!analytic && (
+          <Image
+            src="/assets/invalid.svg"
+            width={30}
+            height={30}
+            alt="Icon valid"
+          />
+        )}
       </div>
       <div className={style.item_cell}>
         <span>{maintenance}</span>
       </div>
       <div className={style.item_cell}>
-        {!service && <img src="/assets/invalid.svg" alt="Icon valid" />}
+        {!service && (
+          <Image
+            src="/assets/invalid.svg"
+            width={30}
+            height={30}
+            alt="Icon valid"
+          />
+        )}
         {service && <span>{service}</span>}
       </div>
     </div>
