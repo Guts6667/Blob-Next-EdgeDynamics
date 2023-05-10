@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState, useRef } from "react";
 import Image from "next/image";
-// import MenuMobile from "../MenuMobile";
 import style from "./Header.module.scss";
 import logo from "/public/assets/edgeDynamics.png";
 
