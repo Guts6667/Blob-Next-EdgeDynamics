@@ -1,7 +1,7 @@
 import style from "./CarouserlItem.module.scss";
 import Image from "next/image";
+import validIcon from '/public/assets/valid.svg';
 import invalidIcon from "/public/assets/invalid.svg";
-import validIcon from "/public/assets/valid.svg";
 /**
  *
  * @param {
@@ -24,7 +24,7 @@ import validIcon from "/public/assets/valid.svg";
  *
  * @returns {JSX.Element}   // Carousel Item
  */
-const CarouselItem = ({
+export default function CarouselItem({
   type,
   premium,
   network,
@@ -33,7 +33,7 @@ const CarouselItem = ({
   maintenance,
   service,
   color,
-}) => {
+}) {
   const itemStyle = {
     border: `solid 1px ${color}`,
   };
@@ -93,6 +93,4 @@ const CarouselItem = ({
       </div>
     </div>
   );
-};
-
-export default CarouselItem;
+}
