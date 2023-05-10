@@ -7,6 +7,8 @@ import OurVision from "@/components/OurVision";
 import OurFounders from "@/components/OurFounders";
 import OurProducts from "@/components/OurProducts";
 import Specifications from "@/components/Specifications";
+import CompetitorsBenchmarks from "@/components/Competitors&Benchmarks";
+import Market from "@/components/Market";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +30,8 @@ export default function Home() {
       <OurFounders />
       <OurProducts />
       <Specifications />
+      <CompetitorsBenchmarks />
+      <Market />
     </>
   );
 }

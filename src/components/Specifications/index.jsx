@@ -57,7 +57,6 @@ export default function Specifications() {
   const [touchMove, setTouchMove] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
 
-
   const handleTouchStart = (e) => {
     setTouchStart(e.targetTouches[0].clientX);
   };
@@ -75,12 +74,9 @@ export default function Specifications() {
   };
 
   // Create a function that will update the index depending on the dot index clicked.
-    const handleDotClick = (dotIndex) => {
-        setCurrentIndex(dotIndex);
-    };
-
- 
-
+  const handleDotClick = (dotIndex) => {
+    setCurrentIndex(dotIndex);
+  };
 
   return (
     <section className={style.container__specs}>
@@ -123,8 +119,6 @@ export default function Specifications() {
                 maintenance={sensor.maintenance}
                 service={sensor.service}
                 color={sensor.color}
-               
-
               />
             );
           })}
@@ -149,7 +143,6 @@ export default function Specifications() {
             maintenance={sensors[currentIndex].maintenance}
             service={sensors[currentIndex].service}
             color={sensors[currentIndex].color}
-            
           />
           <div className={style.dots}>
             {[...Array(sensors.length)].map((_, index) => (

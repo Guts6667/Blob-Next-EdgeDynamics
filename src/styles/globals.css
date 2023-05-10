@@ -8,7 +8,8 @@
 
 @font-face {
   font-family: "Metropolis";
-  src: url("../../public/fonts/metropolis/Metropolis-Bold.otf") format("truetype");
+  src: url("../../public/fonts/metropolis/Metropolis-Bold.otf")
+    format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -31,7 +32,8 @@
 
 @font-face {
   font-family: "Metropolis";
-  src: url("../../public/fonts/metropolis/Metropolis-Black.otf") format("truetype");
+  src: url("../../public/fonts/metropolis/Metropolis-Black.otf")
+    format("truetype");
   font-weight: 900;
   font-style: normal;
 }
@@ -71,22 +73,19 @@ code {
 h1 {
   font-weight: 800;
   font-size: 20px;
-
 }
-h1>strong {
+h1 > strong {
   color: #f0fd71;
   font-size: 20px;
   font-weight: 800;
-  
 }
 @media only screen and (min-width: 768px) {
-  h1{
+  h1 {
     font-size: 30px;
   }
-  h1>strong{
+  h1 > strong {
     font-size: 30px;
   }
-
 }
 
 h2 {
@@ -112,6 +111,14 @@ a {
   color: #f0fd71;
   font-size: 16px;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .section_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 p {
   line-height: 25px;

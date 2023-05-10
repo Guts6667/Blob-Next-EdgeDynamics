@@ -72,7 +72,7 @@ export default function OurProducts() {
   ];
   return (
     <React.Fragment>
-      <div className={style.container__ourProducts} id="products">
+      <div className={style.container__ourProducts} id="products&services">
         <div className={style.container__ourProducts_title}>
           <span>Products & Services</span>
           <h2>Our Products</h2>

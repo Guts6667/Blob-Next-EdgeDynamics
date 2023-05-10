@@ -1,0 +1,32 @@
+.container {
+  &__compBen {
+    padding: 50px 5% 50px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("/assets/bg-comp-ben.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &_title {
+      span {
+        color: #f0fd71;
+      }
+      h2 {
+        text-align: left;
+      }
+      p > strong {
+        color: #f0fd71;
+      }
+    }
+    &_content {
+      margin-top: 50px;
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      overflow: scroll;
+      position: relative;
+    }
+  }
+}

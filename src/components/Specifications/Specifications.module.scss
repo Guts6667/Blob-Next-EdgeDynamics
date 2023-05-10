@@ -3,6 +3,10 @@
   display: flex;
   justify-content: space-between;
   column-gap: 25px;
+  background-image: url("/assets/bg-specs.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   &_heads {
     display: flex;
