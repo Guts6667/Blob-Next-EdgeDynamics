@@ -1,7 +1,7 @@
 import style from "./CarouserlItem.module.scss";
 import Image from "next/image";
-import validIcon from '/public/assets/valid.svg';
-import invalidIcon from "/public/assets/invalid.svg";
+// import validIcon from '/public/assets/valid.svg';
+// import "/assets/invalid.svg" from "/assets/invalid.svg";
 /**
  *
  * @param {
@@ -61,25 +61,25 @@ export default function CarouselItem({
       </div>
       <div className={style.item_cell}>
         {premium && (
-          <Image src={validIcon} width={30} height={30} alt="Icon valid" />
+          <Image src="/assets/valid.svg" width={30} height={30} alt="Icon valid" />
         )}
       </div>
       <div className={style.item_cell}>
         {network && <span>{network}</span>}
         {!network && (
-          <Image src={invalidIcon} width={30} height={30} alt="Icon Invalid" />
+          <Image src={"/assets/invalid.svg"} width={30} height={30} alt="Icon Invalid" />
         )}
       </div>
       <div className={style.item_cell}>
         {!cloud && (
-          <Image src={invalidIcon} width={30} height={30} alt="Icon invalid" />
+          <Image src={"/assets/invalid.svg"} width={30} height={30} alt="Icon invalid" />
         )}
         {cloud && <span>{cloud}</span>}
       </div>
       <div className={style.item_cell}>
         {analytic && <span>{analytic}</span>}
         {!analytic && (
-          <Image src={invalidIcon} width={30} height={30} alt="Icon invalid" />
+          <Image src={"/assets/invalid.svg"} width={30} height={30} alt="Icon invalid" />
         )}
       </div>
       <div className={style.item_cell}>
@@ -87,7 +87,7 @@ export default function CarouselItem({
       </div>
       <div className={style.item_cell}>
         {!service && (
-          <Image src={invalidIcon} width={30} height={30} alt="Icon invalid" />
+          <Image src={"/assets/invalid.svg"} width={30} height={30} alt="Icon invalid" />
         )}
         {service && <span>{service}</span>}
       </div>
