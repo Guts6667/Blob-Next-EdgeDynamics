@@ -2,6 +2,28 @@ import style from "./CarouserlItem.module.scss";
 import Image from "next/image";
 import invalidIcon from "/public/assets/invalid.svg";
 import validIcon from "/public/assets/valid.svg";
+/**
+ *
+ * @param {
+ * // Type of device
+ * type: string,
+ * // Premium
+ * premium: boolean,
+ * // Network
+ * network: string,
+ * // Cloud
+ * cloud: string,
+ * // Analytic
+ * analytic: string,
+ * // Maintenance
+ * maintenance: string,
+ * // Service
+ * service: string,
+ * // Color
+ * color: string, }
+ *
+ * @returns {JSX.Element}   // Carousel Item
+ */
 const CarouselItem = ({
   type,
   premium,
@@ -39,45 +61,25 @@ const CarouselItem = ({
       </div>
       <div className={style.item_cell}>
         {premium && (
-          <Image
-            src={validIcon}
-            width={30}
-            height={30}
-            alt="Icon valid"
-          />
+          <Image src={validIcon} width={30} height={30} alt="Icon valid" />
         )}
       </div>
       <div className={style.item_cell}>
         {network && <span>{network}</span>}
         {!network && (
-          <Image
-            src={invalidIcon}
-            width={30}
-            height={30}
-            alt="Icon Invalid"
-          />
+          <Image src={invalidIcon} width={30} height={30} alt="Icon Invalid" />
         )}
       </div>
       <div className={style.item_cell}>
         {!cloud && (
-          <Image
-            src={invalidIcon}
-            width={30}
-            height={30}
-            alt="Icon invalid"
-          />
+          <Image src={invalidIcon} width={30} height={30} alt="Icon invalid" />
         )}
         {cloud && <span>{cloud}</span>}
       </div>
       <div className={style.item_cell}>
         {analytic && <span>{analytic}</span>}
         {!analytic && (
-          <Image
-            src={invalidIcon}
-            width={30}
-            height={30}
-            alt="Icon invalid"
-          />
+          <Image src={invalidIcon} width={30} height={30} alt="Icon invalid" />
         )}
       </div>
       <div className={style.item_cell}>
@@ -85,12 +87,7 @@ const CarouselItem = ({
       </div>
       <div className={style.item_cell}>
         {!service && (
-          <Image
-            src={invalidIcon}
-            width={30}
-            height={30}
-            alt="Icon invalid"
-          />
+          <Image src={invalidIcon} width={30} height={30} alt="Icon invalid" />
         )}
         {service && <span>{service}</span>}
       </div>
