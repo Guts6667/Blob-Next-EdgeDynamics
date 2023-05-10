@@ -35,10 +35,7 @@
         align-items: center;
         text-align: center;
         @media screen and (min-width: 768px) {
-            grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-
-
-
+          grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
         }
       }
     }
@@ -54,6 +51,11 @@
       strong {
         color: #f0fd71;
         line-height: 25px;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      p {
+        font-weight: 400;
       }
     }
   }
