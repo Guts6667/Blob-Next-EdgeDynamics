@@ -1,7 +1,8 @@
 import style from "./CarouserlItem.module.scss";
 import Image from "next/image";
-import validIcon from '/public/assets/valid.svg';
-import invalidIcon from "/public/assets/invalid.svg" 
+import validIcon from '/public/assets/Ok.png';
+import invalidIcon from "/public/assets/Cancel.png" 
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /**
  *
  * @param {
