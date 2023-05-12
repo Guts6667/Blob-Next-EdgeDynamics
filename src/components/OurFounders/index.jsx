@@ -8,7 +8,7 @@ export default function OurFounders() {
       role: "CIO & Co-Founder",
       country: "France",
       company: "",
-      picture: "mokhliss.jpg",
+      picture: "mokhliss.",
     },
     {
       id: "23DSGgfdsg",
