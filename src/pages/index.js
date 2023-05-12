@@ -11,6 +11,7 @@ import CompetitorsBenchmarks from "@/components/Competitors&Benchmarks";
 import Market from "@/components/Market";
 import Roadmap from "@/components/Roadmap";
 import Prototype from "@/components/Prototype";
+import Contact from "@/components/Contact";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,6 +37,7 @@ export default function Home() {
       <Market />
       <Roadmap />
       <Prototype />
+      <Contact />
     </>
   );
 }
