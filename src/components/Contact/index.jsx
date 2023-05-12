@@ -61,7 +61,7 @@ export default function Contact() {
           <input type="hidden" name="form-name" value="contact" hidden />
         </form>
       ) : (
-        <div className="form-thanks">
+        <div className={styles.form_thanks}>
           <span>
             Your emails has been sent!
             <br />

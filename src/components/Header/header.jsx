@@ -26,15 +26,15 @@ const Header = () => {
           <span></span>
           <span></span>
         </div>
-        <a href="#home">
+        <a href="/#home">
           <Image src={logo} alt="Logo Edge Dynamics" width={88.6} height={36} />
         </a>
-        <a href="#contact" className={style.contact_btn}>
+        <a href="/#contact" className={style.contact_btn}>
           Join Us
         </a>
       </div>
       <div className={style.container__header_desktop}>
-        <a href="#home">
+        <a href="/#home">
           <Image
             src={logo}
             className={style.logo}
@@ -45,10 +45,10 @@ const Header = () => {
         </a>
 
         <nav>
-          <a href="#about">About</a>
-          <a href="#products&services">Products & Services</a>
-          <a href="#roadmap">Roadmap</a>
-          <a href="#contact">
+          <a href="/#about">About</a>
+          <a href="/#products&services">Products & Services</a>
+          <a href="/#roadmap">Roadmap</a>
+          <a href="/#contact">
             <button className={style.contact_btn}>Join Us</button>
           </a>
         </nav>
@@ -56,25 +56,25 @@ const Header = () => {
       {isOpen && (
         <div className={style.container__navMenu}>
           <nav>
-            <a href="#home" onClick={handleBtn}>
+            <a href="/#home" onClick={handleBtn}>
               <span>Home</span>
               <img src="/assets/chevron-right.svg" alt="Chevron Right" />
             </a>
-            <a href="#about" onClick={handleBtn}>
+            <a href="/#about" onClick={handleBtn}>
               <span>About</span>
               <img src="/assets/chevron-right.svg" alt="Chevron Right" />
             </a>
-            <a href="#products&services" onClick={handleBtn}>
+            <a href="/#products&services" onClick={handleBtn}>
               <span>Products & Services</span>
               <img src="/assets/chevron-right.svg" alt="Chevron Right" />
             </a>
-            <a href="#contact" onClick={handleBtn}>
+            <a href="/#contact" onClick={handleBtn}>
               <span>Join Us</span>
               <img src="/assets/chevron-right.svg" alt="Chevron Right" />
             </a>
           </nav>
           <div className={style.container__navMenu_socials}>
-            <a href="#">
+            <a href="/#">
               <img src="/assets/twitter.svg" alt="Icon Twitter" />
             </a>
             <a href="mailto:info@edgedynamics.eu">
