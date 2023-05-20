@@ -1,3 +1,4 @@
+import Networks from "../Networks";
 import styles from "./Contact.module.scss";
 ``;
 import { useState } from "react";
@@ -69,6 +70,7 @@ export default function Contact() {
           </span>
         </div>
       )}
+      <Networks />
     </section>
   );
 }
